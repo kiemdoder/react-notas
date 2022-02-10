@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
+import React from "react";
 import "./App.css";
 import { ComponentTypes } from "./components/ComponentTypes";
-import { AppLayout } from "./components/containers/AppLayout";
+import { AppLayout } from "./components/containers/AppLayout/AppLayout";
 
 function Header() {
   return <span>Header..</span>;
@@ -15,7 +13,11 @@ function SideNav() {
 
 function App() {
   return (
-    <AppLayout header={Header} sideNav={SideNav} content={ComponentTypes} />
+    <AppLayout sideNavWeight={2} contentWeight={3}>
+      <Header />
+      <SideNav />
+      <ComponentTypes />
+    </AppLayout>
   );
 }
 
