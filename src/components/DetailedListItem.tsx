@@ -1,10 +1,14 @@
-interface PropsType {
+interface DetailedListItemProps {
   name: string;
   number: number;
   enabled: boolean;
 }
 
-export const DetailedListItem = ({ name, number, enabled }: PropsType) => {
+export const DetailedListItem = ({
+  name,
+  number,
+  enabled,
+}: DetailedListItemProps) => {
   return (
     <>
       <div>Name: {name}</div>

@@ -1,14 +1,16 @@
 import "./AppLayout.scss";
 
+interface AppLayoutParams {
+  children: any[];
+  sideNavWeight?: number;
+  contentWeight?: number;
+}
+
 export const AppLayout = ({
   children,
   sideNavWeight = 1,
   contentWeight = 3,
-}: {
-  children: any[];
-  sideNavWeight?: number;
-  contentWeight?: number;
-}) => {
+}: AppLayoutParams) => {
   const [header, sideNav, content] = children;
   return (
     <div
