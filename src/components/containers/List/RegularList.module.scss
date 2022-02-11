@@ -1,0 +1,13 @@
+.listItemContainer {
+  display: block;
+  margin: 6px 4px;
+
+  :hover {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+}
+
+.selected {
+  border: 1px solid black;
+}

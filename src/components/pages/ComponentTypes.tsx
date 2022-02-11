@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { RemoteAPI } from "../../data/remote-api";
+import { User } from "../../data/user";
 
 //--[Component with children]---------------------------------------------------------------------------------------------------------
 const List = (props: any) => <ul>{props.children}</ul>;
@@ -45,6 +47,20 @@ const CounterB = (props: { start: number }) => {
   );
 };
 
+//component that loads async data
+const AsyncData = () => {
+  const [user, setUser] = useState<User>();
+
+  useEffect(() => {
+    (async () => {
+      const user = await RemoteAPI.fetchUser(1);
+      setUser(user);
+    })();
+  }, []); // [] will make the effect happen only on the first render
+
+  return <span>{user ? user.name : "loading.."}</span>;
+};
+
 export const ComponentTypes = () => (
   <div>
     <Title title="Toets 1 2 3" />
@@ -58,5 +74,7 @@ export const ComponentTypes = () => (
     <br />
     CounterB:
     <CounterB start={20} />
+    <br />
+    <AsyncData />
   </div>
 );

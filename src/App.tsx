@@ -1,22 +1,22 @@
 import React from "react";
 import "./App.css";
-import { ComponentTypes } from "./components/ComponentTypes";
 import { AppLayout } from "./components/containers/AppLayout/AppLayout";
+import { useAppSelector } from "./app/hooks";
+import { selectPageComponent } from "./features/page-nav/pageNavSlice";
+import { Sidenav } from "./features/page-nav/Sidenav";
 
 function Header() {
   return <span>Header..</span>;
 }
 
-function SideNav() {
-  return <div>Side nav..</div>;
-}
-
 function App() {
+  const Page = useAppSelector(selectPageComponent);
+
   return (
     <AppLayout sideNavWeight={2} contentWeight={3}>
       <Header />
-      <SideNav />
-      <ComponentTypes />
+      <Sidenav />
+      <Page />
     </AppLayout>
   );
 }

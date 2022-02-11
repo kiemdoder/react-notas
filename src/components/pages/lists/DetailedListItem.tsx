@@ -1,13 +1,11 @@
+import { ListItem } from "./list-item";
+
 interface DetailedListItemProps {
-  name: string;
-  number: number;
-  enabled: boolean;
+  listItem: ListItem;
 }
 
 export const DetailedListItem = ({
-  name,
-  number,
-  enabled,
+  listItem: { name, number, enabled },
 }: DetailedListItemProps) => {
   return (
     <>
