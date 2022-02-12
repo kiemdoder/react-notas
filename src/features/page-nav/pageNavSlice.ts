@@ -1,29 +1,21 @@
-import { ComponentTypes } from "../../components/pages/ComponentTypes";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
+import { sideNavItems } from "./side-nav-items";
 
 export interface PageNavState {
   pageTitle: string;
-  pageComponent: () => JSX.Element;
 }
 
 const initialState: PageNavState = {
   pageTitle: "Component types",
-  pageComponent: ComponentTypes,
 };
 
 export const pageNavSlice = createSlice({
   name: "pageNav",
   initialState,
   reducers: {
-    gotoPage: (
-      state,
-      {
-        payload: { pageTitle, pageComponent },
-      }: PayloadAction<{ pageTitle: string; pageComponent: () => JSX.Element }>
-    ) => {
-      state.pageTitle = pageTitle;
-      state.pageComponent = pageComponent;
+    gotoPage: (state, { payload }: PayloadAction<string>) => {
+      state.pageTitle = payload;
     },
   },
 });
@@ -33,6 +25,7 @@ export const { gotoPage } = pageNavSlice.actions;
 //selectors
 export const selectPageTitle = (state: RootState) => state.pageNav.pageTitle;
 export const selectPageComponent = (state: RootState) =>
-  state.pageNav.pageComponent;
+  sideNavItems.find((it) => it.label === state.pageNav.pageTitle)?.component ||
+  sideNavItems[0].component;
 
 export default pageNavSlice.reducer;

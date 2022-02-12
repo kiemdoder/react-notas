@@ -18,7 +18,7 @@ export const RegularList = ({
   const [selectedItem, setSelectedItem] = useState();
 
   const selectedClass = (item: any) => {
-    if (idFn) {
+    if (idFn && selectedItem) {
       return idFn(item) === idFn(selectedItem) ? styles.selected : "";
     }
     return "";

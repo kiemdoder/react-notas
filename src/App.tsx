@@ -13,7 +13,7 @@ function App() {
   const Page = useAppSelector(selectPageComponent);
 
   return (
-    <AppLayout sideNavWeight={2} contentWeight={3}>
+    <AppLayout sideNavWeight={1} contentWeight={3}>
       <Header />
       <Sidenav />
       <Page />
