@@ -1,30 +1,25 @@
-import { useState } from "react";
 import styles from "./Modal.module.scss";
 
 interface ModalProps {
+  shouldShow: boolean;
+  onRequestClose?: () => void;
   children: any[] | any; //TODO: component types?
 }
 
-export const Modal = ({ children }: ModalProps) => {
-  const [shouldShow, setShouldShow] = useState(false);
-
-  return (
-    <>
-      <button onClick={() => setShouldShow(true)}>Show modal</button>
-      {shouldShow && (
-        <div
-          className={styles.modalBackground}
-          onClick={() => setShouldShow(false)}
-        >
-          <div
-            className={styles.modalBody}
-            onClick={(e) => e.stopPropagation()} //stop the event from bubbling up and closing the modal
-          >
-            <button onClick={() => setShouldShow(false)}>Hide modal</button>
-            {children}
-          </div>
-        </div>
-      )}
-    </>
-  );
+export const Modal = ({
+  shouldShow,
+  onRequestClose = () => undefined,
+  children,
+}: ModalProps) => {
+  return shouldShow ? (
+    <div className={styles.modalBackground} onClick={onRequestClose}>
+      <div
+        className={styles.modalBody}
+        onClick={(e) => e.stopPropagation()} //stop the event from bubbling up and closing the modal
+      >
+        <button onClick={onRequestClose}>Hide modal</button>
+        {children}
+      </div>
+    </div>
+  ) : null;
 };

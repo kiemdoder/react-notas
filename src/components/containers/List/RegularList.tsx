@@ -6,7 +6,7 @@ interface RegularListProps {
   idFn?: (it: any) => any;
   itemSelected?: (it: any) => void;
   resourceName: string;
-  itemComponent: any;
+  itemComponent: (props: any) => JSX.Element;
 }
 export const RegularList = ({
   items,
