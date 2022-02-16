@@ -1,8 +1,8 @@
+import { useState } from "react";
 import {
   MultiStepForm,
   MultiStepFormData,
-} from "../multi-step-form/MultiStepForm";
-import { useState } from "react";
+} from "../components/multi-step-form/MultiStepForm";
 
 interface StepProps {
   onNext?: (stepData: MultiStepFormData) => void;

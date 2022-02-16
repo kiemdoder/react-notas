@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { RemoteAPI } from "../../data/remote-api";
-import { User } from "../../data/user";
+import { User } from "../data/user";
+import { RemoteAPI } from "../data/remote-api";
 
 //--[Component with children]---------------------------------------------------------------------------------------------------------
 const List = (props: any) => <ul>{props.children}</ul>;

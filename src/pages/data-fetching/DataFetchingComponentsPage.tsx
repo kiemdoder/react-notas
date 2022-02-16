@@ -1,7 +1,7 @@
-import { HttpDataSource } from "../../data-fetching/HttpDataSource";
 import { UserInfo } from "./UserInfo";
-import { DataSource } from "../../data-fetching/DataSource";
-import { RemoteAPI } from "../../../data/remote-api";
+import { RemoteAPI } from "../../data/remote-api";
+import { HttpDataSource } from "../../components/data-fetching/HttpDataSource";
+import { DataSource } from "../../components/data-fetching/DataSource";
 
 export const DataFetchingComponentsPage = () => {
   return (

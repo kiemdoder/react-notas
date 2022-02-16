@@ -1,10 +1,11 @@
+import { MultiStepFormPage } from "../../pages/MultiStepFormPage";
+import { ListsPage } from "../../pages/lists/Lists";
+import { ComponentTypes } from "../../pages/ComponentTypes";
+import { ModalPage } from "../../pages/ModalPage";
 import { SideNavItem } from "./side-nav-item";
-import { ComponentTypes } from "../../components/pages/ComponentTypes";
-import { DataFetchingComponentsPage } from "../../components/pages/data-fetching/DataFetchingComponentsPage";
-import { ListsPage } from "../../components/pages/lists/Lists";
-import { ModalPage } from "../../components/pages/ModalPage";
+import { DataFetchingComponentsPage } from "../../pages/data-fetching/DataFetchingComponentsPage";
 import { ControlledForm } from "../../components/controlled/ControlledForm";
-import { MultiStepFormPage } from "../../components/pages/MultiStepFormPage";
+import { HigherOrderComponents } from "../../pages/HigherOrderComponents";
 
 export const sideNavItems: SideNavItem[] = [
   { label: "Component types", component: ComponentTypes },
@@ -13,4 +14,5 @@ export const sideNavItems: SideNavItem[] = [
   { label: "Modals", component: ModalPage },
   { label: "Controlled form", component: ControlledForm },
   { label: "Multi step form", component: MultiStepFormPage },
+  { label: "Higher order components", component: HigherOrderComponents },
 ];

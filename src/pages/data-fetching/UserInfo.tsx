@@ -1,4 +1,4 @@
-import { User } from "../../../data/user";
+import { User } from "../../data/user";
 
 export const UserInfo = ({ user }: { user?: User }) => {
   if (user) {

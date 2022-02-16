@@ -1,6 +1,6 @@
-import { RegularList } from "../../containers/List/RegularList";
 import { SimpleListItem } from "./SimpleListItem";
 import { DetailedListItem } from "./DetailedListItem";
+import { RegularList } from "../../components/containers/List/RegularList";
 
 const listData = Array.from({ length: 10 }).map((_, i) => ({
   name: "Name" + i,

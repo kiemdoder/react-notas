@@ -10,6 +10,13 @@ export namespace RemoteAPI {
     });
   }
 
+  export function updateUser(user: User): Promise<User> {
+    console.log("updating user", user);
+    return new Promise((resolve) => {
+      setTimeout(() => resolve({ ...user }), 1000);
+    });
+  }
+
   export function fetchUsers(): Promise<User[]> {
     return new Promise((resolve) => {
       setTimeout(() =>
