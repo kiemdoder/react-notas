@@ -1,7 +1,7 @@
-import { withEditableUser } from "./withEditableUser";
 import { EditUserComponentProps } from "./edit-user-component-props";
+import { withEditableResource } from "./withEditableResource";
 
-export const UserInfoForm = withEditableUser(
+export const UserInfoForm2 = withEditableResource(
   ({ user, onChangeUser, onSaveUser, onResetUser }: EditUserComponentProps) => {
     if (user) {
       const { name, enabled } = user;
@@ -33,5 +33,6 @@ export const UserInfoForm = withEditableUser(
 
     return <span>Loading..</span>;
   },
-  123
+  "/user/123",
+  "user"
 );

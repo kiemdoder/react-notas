@@ -1,5 +1,7 @@
 import { withUser } from "../higher-order-functions/with-user";
 import { User } from "../data/user";
+import { UserInfoForm } from "../higher-order-functions/UserInfoForm";
+import { UserInfoForm2 } from "../higher-order-functions/UserInfoForm2";
 
 const UserDetail = ({ user: { name, enabled } }: { user: User }) => (
   <>
@@ -10,5 +12,16 @@ const UserDetail = ({ user: { name, enabled } }: { user: User }) => (
 
 export const HigherOrderComponents = () => {
   const UserInfo = withUser(UserDetail, 123);
-  return <UserInfo />;
+  return (
+    <>
+      <p>withUser</p>
+      <UserInfo />
+      <hr />
+      <p>withEditableUser</p>
+      <UserInfoForm />
+      <hr />
+      <p>withEditableResource</p>
+      <UserInfoForm2 />
+    </>
+  );
 };

@@ -11,7 +11,7 @@ export namespace RemoteAPI {
   }
 
   export function updateUser(user: User): Promise<User> {
-    console.log("updating user", user);
+    console.log("Update user API call", user);
     return new Promise((resolve) => {
       setTimeout(() => resolve({ ...user }), 1000);
     });
