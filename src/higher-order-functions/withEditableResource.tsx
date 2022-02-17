@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { User } from "../data/user";
 import { RemoteAPI } from "../data/remote-api";
 
-const capitalize = (str: string) => str.charAt(0).toLowerCase() + str.slice(1);
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
 export const withEditableResource = (
   Component: (props: any) => JSX.Element,
@@ -10,8 +10,8 @@ export const withEditableResource = (
   resourceName: string
 ) => {
   return (props: any) => {
-    const [originalData, setOriginalData] = useState<User>();
-    const [data, setData] = useState<User>();
+    const [originalData, setOriginalData] = useState<any>();
+    const [data, setData] = useState<any>();
 
     useEffect(() => {
       RemoteAPI.httpGet(resourcePath).then((user) => {
