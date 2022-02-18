@@ -10,7 +10,7 @@ const UserDetail = ({ user: { name, enabled } }: { user: User }) => (
   </>
 );
 
-export const HigherOrderComponents = () => {
+export const HigherOrderComponentsPage = () => {
   const UserInfo = withUser(UserDetail, 123);
   return (
     <>

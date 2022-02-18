@@ -61,7 +61,7 @@ const AsyncData = () => {
   return <span>{user ? user.name : "loading.."}</span>;
 };
 
-export const ComponentTypes = () => (
+export const ComponentTypesPage = () => (
   <div>
     <Title title="Toets 1 2 3" />
     <List>
