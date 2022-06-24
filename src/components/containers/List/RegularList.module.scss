@@ -1,6 +1,8 @@
 .listItemContainer {
   display: block;
   margin: 6px 4px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 
   &:hover {
     border-top: 2px solid black;
@@ -9,5 +11,6 @@
 }
 
 .selected {
-  border: 1px solid black;
+  background: bisque;
+  transition: 400ms;
 }

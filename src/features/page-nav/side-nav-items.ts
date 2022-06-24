@@ -7,7 +7,8 @@ import { DataFetchingComponentsPage } from "../../pages/data-fetching/DataFetchi
 import { ControlledForm } from "../../components/controlled/ControlledForm";
 import { HigherOrderComponentsPage } from "../../pages/HigherOrderComponentsPage";
 import { CustomHooksPage } from "../../pages/CustomHooksPage";
-import { ContextPage } from "../../pages/ContextPage";
+import { ContextPage1 } from "../../pages/context/ContextPage1";
+import { ContextPage2 } from "../../pages/context/ContextPage2";
 
 export const sideNavItems: SideNavItem[] = [
   { label: "Component types", component: ComponentTypesPage },
@@ -18,5 +19,6 @@ export const sideNavItems: SideNavItem[] = [
   { label: "Multi step form", component: MultiStepFormPage },
   { label: "Higher order components", component: HigherOrderComponentsPage },
   { label: "Custom hooks", component: CustomHooksPage },
-  { label: "Context", component: ContextPage },
+  { label: "Context1", component: ContextPage1 },
+  { label: "Context2", component: ContextPage2 },
 ];
