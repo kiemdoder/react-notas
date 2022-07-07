@@ -1,0 +1,30 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  //display: grid;
+  //grid-template-columns: 1fr;
+  //grid-template-rows: max-content minmax(0, 1fr) max-content minmax(0, 1fr);
+
+  height: 100%
+}
+
+/* this is the flex container that will take the rest of the height */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  min-height: 0px; /* IMPORTANT: you need this for non-chrome browsers */
+}
+
+/* the container for our overflowed content */
+.overflow-container {
+  flex: 1;
+  overflow: auto;
+}
+
+.list-container {
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+}

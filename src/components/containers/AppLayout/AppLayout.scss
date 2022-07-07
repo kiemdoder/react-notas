@@ -1,7 +1,7 @@
 .app-layout {
   display: grid;
   grid-template-columns: 1fr 3fr; // overridden by component element style
-  grid-template-rows: max-content 1fr;
+  grid-template-rows: max-content minmax(0, 1fr); //minmax(0, 1fr) fixes scrolling
   height: 100vh;
 
   &-header {
