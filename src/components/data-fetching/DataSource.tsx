@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { RemoteAPI } from "../../data/remote-api";
 
 interface DataSourceProps {
   getDataFn: () => Promise<any>;
