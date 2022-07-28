@@ -10,6 +10,7 @@ import { CustomHooksPage } from "../../pages/CustomHooksPage";
 import { ContextPage1 } from "../../pages/context/ContextPage1";
 import { ContextPage2 } from "../../pages/context/ContextPage2";
 import { StyledComponentsPage } from "../../pages/StyledComponentsPage";
+import { GraphQLPage } from "../../pages/GraphQLPage";
 
 export const sideNavItems: SideNavItem[] = [
   { label: "Component types", component: ComponentTypesPage },
@@ -23,4 +24,5 @@ export const sideNavItems: SideNavItem[] = [
   { label: "Context1", component: ContextPage1 },
   { label: "Context2", component: ContextPage2 },
   { label: "Styled components", component: StyledComponentsPage },
+  { label: "GraphQL", component: GraphQLPage },
 ];

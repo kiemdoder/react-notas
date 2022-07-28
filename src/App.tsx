@@ -5,6 +5,8 @@ import { useAppSelector } from "./app/hooks";
 import { selectPageComponent } from "./features/page-nav/pageNavSlice";
 import { Sidenav } from "./features/page-nav/Sidenav";
 import { ThemeProvider } from "styled-components";
+import { ApolloProvider } from "@apollo/client";
+import { apolloClient } from "./data/apollo";
 
 const theme = {
   colors: {
@@ -21,11 +23,13 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppLayout sideNavWeight={1} contentWeight={3}>
-        <Header />
-        <Sidenav />
-        <Page />
-      </AppLayout>
+      <ApolloProvider client={apolloClient}>
+        <AppLayout sideNavWeight={1} contentWeight={3}>
+          <Header />
+          <Sidenav />
+          <Page />
+        </AppLayout>
+      </ApolloProvider>
     </ThemeProvider>
   );
 }
