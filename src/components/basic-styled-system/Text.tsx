@@ -1,3 +1,4 @@
+import "react-tippy/dist/tippy.css";
 import styled from "styled-components";
 import {
   color,
@@ -9,10 +10,11 @@ import {
   space,
   SpaceProps,
 } from "styled-system";
-import React from "react";
+import React, { useRef, useState } from "react";
+import { Tooltip } from "react-tippy";
 
 interface StyledTextProps {
-  cursor: string;
+  cursor?: string;
 }
 
 const StyledText = styled.span<StyledTextProps>`
@@ -20,7 +22,11 @@ const StyledText = styled.span<StyledTextProps>`
   ${flex}
   ${layout}
   ${space}
-  cursor: ${({ cursor }) => cursor}
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: ${({ cursor }) => cursor};
 `;
 
 export interface TextProps
@@ -30,8 +36,31 @@ export interface TextProps
     SpaceProps,
     StyledTextProps {
   children: React.ReactNode;
+  overflowToolTip?: string;
 }
 export const Text = (props: TextProps) => {
-  const { children } = props;
-  return <StyledText {...(props as any)}>{children}</StyledText>;
+  const { children, overflowToolTip } = props;
+  const textRef = useRef<HTMLElement>();
+  const [showToolTip, setShowToolTip] = useState(false);
+  return (
+    <Tooltip title={overflowToolTip} open={showToolTip}>
+      <StyledText
+        {...(props as any)}
+        ref={textRef}
+        onMouseEnter={() => {
+          if (
+            textRef.current &&
+            textRef.current?.offsetWidth < textRef.current?.scrollWidth
+          ) {
+            setShowToolTip(true);
+          }
+        }}
+        onMouseLeave={() => {
+          setShowToolTip(false);
+        }}
+      >
+        {children}
+      </StyledText>
+    </Tooltip>
+  );
 };
