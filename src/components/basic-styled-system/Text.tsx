@@ -9,6 +9,8 @@ import {
   LayoutProps,
   space,
   SpaceProps,
+  typography,
+  TypographyProps,
 } from "styled-system";
 import React, { useRef, useState } from "react";
 import { Tooltip } from "react-tippy";
@@ -22,6 +24,7 @@ const StyledText = styled.span<StyledTextProps>`
   ${flex}
   ${layout}
   ${space}
+  ${typography}
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -34,9 +37,11 @@ export interface TextProps
     FlexProps,
     LayoutProps,
     SpaceProps,
-    StyledTextProps {
+    StyledTextProps,
+    TypographyProps {
   children: React.ReactNode;
   overflowToolTip?: string;
+  className?: string;
 }
 export const Text = (props: TextProps) => {
   const { children, overflowToolTip } = props;

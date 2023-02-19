@@ -1,9 +1,6 @@
 import "./Lists.scss";
-
-import { SimpleListItem } from "./SimpleListItem";
 import { DetailedListItem } from "./DetailedListItem";
-import { RegularList } from "../../components/containers/List/RegularList";
-import { GenericList } from "../../components/containers/List/GenericList";
+import { GenericList } from "../../components/containers/list/GenericList";
 import { useState } from "react";
 import { OverflowContainer } from "../../components/layout/OverflowContainer";
 

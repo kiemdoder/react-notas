@@ -1,4 +1,4 @@
-import { RegularList } from "../../components/containers/List/RegularList";
+import { RegularList } from "../../components/containers/list/RegularList";
 import { SideNavListItem } from "./SideNavListItem";
 import { gotoPage } from "./pageNavSlice";
 import { useAppDispatch } from "../../app/hooks";

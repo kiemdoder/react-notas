@@ -12,6 +12,8 @@ import { ContextPage2 } from "../../pages/context/ContextPage2";
 import { StyledComponentsPage } from "../../pages/StyledComponentsPage";
 import { GraphQLPage } from "../../pages/GraphQLPage";
 import { TextPage } from "../../pages/TextPage";
+import { PropertiesSheetPage } from "../../pages/PropertiesSheetPage";
+import { TablePage } from "../../pages/TablePage";
 
 export const sideNavItems: SideNavItem[] = [
   { label: "Component types", component: ComponentTypesPage },
@@ -27,4 +29,6 @@ export const sideNavItems: SideNavItem[] = [
   { label: "Styled components", component: StyledComponentsPage },
   { label: "GraphQL", component: GraphQLPage },
   { label: "Text", component: TextPage },
+  { label: "Properties sheet", component: PropertiesSheetPage },
+  { label: "Table", component: TablePage },
 ];

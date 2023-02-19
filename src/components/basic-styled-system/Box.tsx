@@ -3,8 +3,8 @@ import styled from "styled-components";
 import {
   color,
   ColorProps,
-  flex,
-  FlexProps,
+  flexbox,
+  FlexboxProps,
   layout,
   LayoutProps,
   space,
@@ -14,18 +14,19 @@ import React from "react";
 
 const Styledbox = styled.div`
   ${color}
-  ${flex}
+  ${flexbox}
   ${layout}
   ${space}
 `;
 
-export interface TextProps
+export interface BoxProps
   extends ColorProps,
-    FlexProps,
+    FlexboxProps,
     LayoutProps,
     SpaceProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
 }
-export const Box = ({ children, ...props }: TextProps) => (
+export const Box = ({ children, ...props }: BoxProps) => (
   <Styledbox {...(props as any)}>{children}</Styledbox>
 );
