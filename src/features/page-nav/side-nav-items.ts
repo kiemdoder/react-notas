@@ -15,6 +15,7 @@ import { TextPage } from "../../pages/TextPage";
 import { PropertiesSheetPage } from "../../pages/PropertiesSheetPage";
 import { TablePage } from "../../pages/TablePage";
 import { FormPage } from "../../pages/FormPage";
+import { HTTPCallPage } from "../../pages/HTTPCallPage";
 
 export const sideNavItems: SideNavItem[] = [
   { label: "Component types", component: ComponentTypesPage },
@@ -33,4 +34,5 @@ export const sideNavItems: SideNavItem[] = [
   { label: "Properties sheet", component: PropertiesSheetPage },
   { label: "Table", component: TablePage },
   { label: "Forms", component: FormPage },
+  { label: "HTTP call", component: HTTPCallPage },
 ];

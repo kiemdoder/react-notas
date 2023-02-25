@@ -92,7 +92,7 @@ export const GenericAGTable = ({
       });
     }
 
-    return [];
+    return columnIDs.map((id) => ({ field: id }));
   }, [columnIDs, columnDefinitions, columnGroupDefinitions]);
 
   if (loading) {
