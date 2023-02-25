@@ -14,6 +14,7 @@ import { GraphQLPage } from "../../pages/GraphQLPage";
 import { TextPage } from "../../pages/TextPage";
 import { PropertiesSheetPage } from "../../pages/PropertiesSheetPage";
 import { TablePage } from "../../pages/TablePage";
+import { FormPage } from "../../pages/FormPage";
 
 export const sideNavItems: SideNavItem[] = [
   { label: "Component types", component: ComponentTypesPage },
@@ -31,4 +32,5 @@ export const sideNavItems: SideNavItem[] = [
   { label: "Text", component: TextPage },
   { label: "Properties sheet", component: PropertiesSheetPage },
   { label: "Table", component: TablePage },
+  { label: "Forms", component: FormPage },
 ];

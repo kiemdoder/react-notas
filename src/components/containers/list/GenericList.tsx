@@ -79,7 +79,7 @@ export const GenericList = ({
   const list = loading ? (
     <ListContentLoader />
   ) : items ? (
-    items.map((item, i) => (
+    items.map((item, _) => (
       <ListItemContainer
         item={item}
         selected={itemSelected(item)}
