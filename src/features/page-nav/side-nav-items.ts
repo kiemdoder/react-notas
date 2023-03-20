@@ -16,6 +16,8 @@ import { PropertiesSheetPage } from "../../pages/PropertiesSheetPage";
 import { TablePage } from "../../pages/TablePage";
 import { FormPage } from "../../pages/FormPage";
 import { HTTPCallPage } from "../../pages/HTTPCallPage";
+import { ProgrammaticStylePage } from "../../pages/programmatic-style/ProgrammaticStylePage";
+import { ThemePage } from "../../pages/theme/ThemePage";
 
 export const sideNavItems: SideNavItem[] = [
   { label: "Component types", component: ComponentTypesPage },
@@ -35,4 +37,6 @@ export const sideNavItems: SideNavItem[] = [
   { label: "Table", component: TablePage },
   { label: "Forms", component: FormPage },
   { label: "HTTP call", component: HTTPCallPage },
+  { label: "Programmatic style", component: ProgrammaticStylePage },
+  { label: "Theme", component: ThemePage },
 ];
