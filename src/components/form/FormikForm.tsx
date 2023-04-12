@@ -18,6 +18,7 @@ export const FormikForm = () => {
         email: Yup.string().email("Invalid email address").required("Required"),
       })}
       onSubmit={(values, { setSubmitting }) => {
+        console.log({ values });
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
