@@ -75,6 +75,7 @@ export function CounterPage() {
 
   return (
     <div>
+        Counter A
       <div className={styles.row}>
         <button
           className={styles.button}
@@ -121,7 +122,14 @@ export function CounterPage() {
 
       <hr/>
 
-      <CounterClassComponent counterName="A"/>
+        Counter A =&gt;
+        <CounterClassComponent counterName="A"/>
+
+        <br/>
+        <br/>
+
+        Counter B =&gt;
+        <CounterClassComponent counterName="B"/>
     </div>
   );
 }
