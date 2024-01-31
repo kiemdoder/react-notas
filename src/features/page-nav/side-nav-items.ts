@@ -1,26 +1,28 @@
-import { MultiStepFormPage } from "../../pages/MultiStepFormPage";
-import { ListsPage } from "../../pages/lists/Lists";
-import { ComponentTypesPage } from "../../pages/ComponentTypesPage";
-import { ModalPage } from "../../pages/ModalPage";
-import { SideNavItem } from "./side-nav-item";
-import { DataFetchingComponentsPage } from "../../pages/data-fetching/DataFetchingComponentsPage";
-import { ControlledForm } from "../../components/controlled/ControlledForm";
-import { HigherOrderComponentsPage } from "../../pages/HigherOrderComponentsPage";
-import { CustomHooksPage } from "../../pages/CustomHooksPage";
-import { ContextPage1 } from "../../pages/context/ContextPage1";
-import { ContextPage2 } from "../../pages/context/ContextPage2";
-import { StyledComponentsPage } from "../../pages/StyledComponentsPage";
-import { GraphQLPage } from "../../pages/GraphQLPage";
-import { TextPage } from "../../pages/TextPage";
-import { PropertiesSheetPage } from "../../pages/PropertiesSheetPage";
-import { TablePage } from "../../pages/TablePage";
-import { FormPage } from "../../pages/FormPage";
-import { HTTPCallPage } from "../../pages/HTTPCallPage";
-import { ProgrammaticStylePage } from "../../pages/programmatic-style/ProgrammaticStylePage";
-import { ThemePage } from "../../pages/theme/ThemePage";
+import {MultiStepFormPage} from "../../pages/MultiStepFormPage";
+import {ListsPage} from "../../pages/lists/Lists";
+import {ComponentTypesPage} from "../../pages/ComponentTypesPage";
+import {ModalPage} from "../../pages/ModalPage";
+import {SideNavItem} from "./side-nav-item";
+import {DataFetchingComponentsPage} from "../../pages/data-fetching/DataFetchingComponentsPage";
+import {ControlledForm} from "../../components/controlled/ControlledForm";
+import {HigherOrderComponentsPage} from "../../pages/HigherOrderComponentsPage";
+import {CustomHooksPage} from "../../pages/CustomHooksPage";
+import {ContextPage1} from "../../pages/context/ContextPage1";
+import {ContextPage2} from "../../pages/context/ContextPage2";
+import {StyledComponentsPage} from "../../pages/StyledComponentsPage";
+import {GraphQLPage} from "../../pages/GraphQLPage";
+import {TextPage} from "../../pages/TextPage";
+import {PropertiesSheetPage} from "../../pages/PropertiesSheetPage";
+import {TablePage} from "../../pages/TablePage";
+import {FormPage} from "../../pages/FormPage";
+import {HTTPCallPage} from "../../pages/HTTPCallPage";
+import {ProgrammaticStylePage} from "../../pages/programmatic-style/ProgrammaticStylePage";
+import {ThemePage} from "../../pages/theme/ThemePage";
+import {CounterPage} from "../../pages/CounterPage";
 
 export const sideNavItems: SideNavItem[] = [
   { label: "Component types", component: ComponentTypesPage },
+  { label: "Redux counter", component: CounterPage },
   { label: "Data fetching", component: DataFetchingComponentsPage },
   { label: "Lists", component: ListsPage },
   { label: "Modals", component: ModalPage },

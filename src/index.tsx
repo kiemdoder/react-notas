@@ -5,6 +5,7 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import {enableMapSet} from 'immer'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,3 +20,6 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// Enable MapSet plugin for Immer
+enableMapSet()
