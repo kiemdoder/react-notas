@@ -13,11 +13,11 @@ import styles from '../features/counter/Counter.module.css';
 import {RootState} from "../app/store";
 import {connect, ConnectedProps} from "react-redux";
 
-interface OwnState {
+interface OwnProps {
   counterName: string;
 }
 
-const mapState = (state: RootState, {counterName}: OwnState) =>({
+const mapState = (state: RootState, {counterName}: OwnProps) =>({
   counterValue: selectCounter(state, counterName).value
 });
 const mapDispatch = {
@@ -27,8 +27,11 @@ const mapDispatch = {
 }
 const connector = connect(mapState, mapDispatch);
 
+// Create a new type that contains the fields from both mapState and mapDispatch. This will be used
+// to create the component properties interface definition.
 type PropsFromRedux = ConnectedProps<typeof connector>;
-interface CounterClassComponentProps extends OwnState, PropsFromRedux {}
+
+interface CounterClassComponentProps extends OwnProps, PropsFromRedux {}
 interface CounterClassComponentState {}
 
 class CounterClassComponent_ extends React.Component<CounterClassComponentProps, CounterClassComponentState> {
