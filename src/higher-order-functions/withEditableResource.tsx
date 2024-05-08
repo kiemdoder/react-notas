@@ -18,7 +18,7 @@ export const withEditableResource = (
         setOriginalData(user);
         setData(user);
       });
-    }, [resourcePath]);
+    });
 
     const onChange = (changes: Partial<User>) => {
       if (data) {

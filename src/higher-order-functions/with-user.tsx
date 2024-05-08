@@ -11,7 +11,7 @@ export const withUser = (
 
     useEffect(() => {
       RemoteAPI.fetchUser(userId).then(setUser);
-    }, [userId]);
+    }, [setUser]);
 
     return user ? <Component {...props} user={user} /> : <span>Loading..</span>;
   };

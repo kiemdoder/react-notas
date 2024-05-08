@@ -23,7 +23,7 @@ export const MultiStepForm = ({
     if (currentIndex >= childrenArray.length) {
       onFinish();
     }
-  }, [children, currentIndex]);
+  }, [childrenArray.length, currentIndex, onFinish]);
 
   if (currentIndex >= childrenArray.length) {
     return <div>Done</div>;

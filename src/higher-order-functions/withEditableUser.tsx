@@ -15,7 +15,7 @@ export const withEditableUser = (
         setOriginalUser(user);
         setUser(user);
       });
-    }, [userId]);
+    });
 
     const onChangeUser = (changes: Partial<User>) => {
       if (user) {
